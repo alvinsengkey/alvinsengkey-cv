@@ -1,0 +1,659 @@
+/* color reference: https://colorhunt.co/palette/207313 */
+
+/* for the smooth scrolling when I click the button for going to the certain parts of website */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0%;
+  background-color: #030303;
+}
+
+/* ---------- BUTTON ---------- */
+
+/* button for go to the top, in bottom-right. I use z-index:5 so that it will not be covered by the others */
+.top {
+  z-index: 5;
+  position: fixed;
+  border-radius: 100%;
+  right: 50px;
+  bottom: 80px;
+  width: 50px;
+  height: 50px;
+  background-color: #ff4b5c;
+  color: white;
+  text-align: center;
+  box-shadow: 8px 8px 10px #000000b9;
+  transition: 0.5s;
+}
+
+.top-button {
+  color: white;
+}
+
+.top:hover {
+  background-color: #66bfbf;
+  box-shadow: 3px 3px 10px #000000b9;
+  transition: 0.5s;
+}
+
+.up {
+  font-size: 40px;
+}
+
+/* the play sound button in top-right. I use z-index:5 so that it will not be covered by the others  */
+.soundandtext {
+  z-index: 5;
+  position: fixed;
+  right: 50px;
+  top: 40px;
+}
+
+/*     the music title */
+.song-title {
+  float: left;
+  padding-right: 6px;
+}
+
+.song-title p {
+  margin-top: 5px;
+  color: #858585;
+  font-family: "Tangerine", cursive;
+  font-size: 22px;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+/*     the music icon */
+.sound {
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  background-color: #030303;
+  color: white;
+  text-align: center;
+  box-shadow: 8px 8px 10px #292929b9;
+  transition: 0.5s;
+  float: left;
+}
+
+.sound:hover {
+  background-color: #6b6b6b;
+  box-shadow: 3px 3px 10px #acacacb9;
+  transition: 0.5s;
+}
+
+.sound-button {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  position: relative;
+  top: 3px;
+}
+
+/* ---------- CONTAINER ---------- */
+
+.container {
+  margin-left: 80px;
+  padding: 60px;
+}
+
+.container-content {
+  margin-left: 80px;
+  padding: 80px;
+}
+
+/* ---------- SIDEBAR ---------- */
+
+/* sidebar. I use position:fixed for this selector and some other selectors 
+   so that it stay in the screen when the others are scrolled */
+.sidebar {
+  z-index: 5;
+  list-style-type: none;
+  margin: 0;
+  padding: 140px 0;
+  width: 80px;
+  background-color: #030303;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  top: 0%;
+  text-align: center;
+}
+
+/* alvin's paraph - icon */
+.sidebar-icon {
+  z-index: 6;
+  position: fixed;
+  margin: 16px 0 0 5px;
+  width: 70px;
+  top: 0;
+}
+
+/* <li></li> elements in navigation bar */
+.nav-li {
+  padding: 8px 0;
+}
+
+/* <a></a> elements in navigation bar (linked to other parts of website) */
+.navlink {
+  display: block;
+  padding: 10px 0;
+  color: #818181;
+  text-decoration: none;
+  font-size: 18px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 0%;
+  transition: background-color 0.5s, color 5s, border-radius 0.8s, width 0.8s;
+}
+
+.navlink:hover {
+  background-color: #e7c3c3;
+  box-shadow: 0px 0px 50px #ff4b5c80;
+  color: #ff2f44;
+  border-right: 2px solid #ff4b5c;
+  border-radius: 100%;
+  width: 50%;
+  margin: 0 auto;
+  transition: background-color 0.8s, box-shadow 0.8s, color 0.3s,
+    border-right 0.8s, border-radius 0.8s, width 0.8s, margin 0.8s;
+}
+
+/* ---------- HOMEPAGE ---------- */
+
+.home {
+  background: linear-gradient(to bottom, #e0ece400 50%, #056674 100%);
+  height: 500px;
+}
+
+/* red polygon with dots - png picture. I use position:absolute so it can be moved freely using 'left' attribute.
+   i also use this in some other selectors */
+.dottedpng {
+  position: absolute;
+  width: 95%;
+  transform: translateY(-75%);
+  left: 63px;
+}
+
+/* the "hi i'm alvin a future programmer in progress" div */
+.nickname {
+  position: relative;
+  color: #fff;
+  margin-top: 25px;
+  text-align: center;
+  text-shadow: 0 0 10px #ff4b5c;
+}
+
+/* .nickname first line */
+.nickname h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: 20px;
+}
+
+/* .nickname second line */
+.alvin {
+  margin: 50px 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 5rem;
+  color: #fff;
+  border-bottom: 0px;
+  width: auto;
+  padding-bottom: 0px;
+}
+
+/* .nickname third line */
+.nickname p {
+  font-family: "Tangerine", cursive;
+  font-size: 28px;
+}
+
+/* circuit png picture from homepage to about me page */
+.home img {
+  position: absolute;
+  transform: rotate(180deg);
+  width: 95%;
+  right: 0;
+  top: 130px;
+}
+
+/* download resume button */
+.resume {
+  position: relative;
+  border-radius: 100px;
+  color: #ff4b5c;
+  font-family: "Arsenal", sans-serif;
+  font-size: 20px;
+  padding: 16px;
+  background-color: #000000af;
+  box-shadow: 0 0 10px 0 #ff4b5c;
+  border: solid #ff4b5c 1px;
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  margin-top: 50px;
+  transition: 0.8s;
+}
+
+.resume:hover {
+  background: #ff4b5c;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+/* ---------- ABOUT ME ---------- */
+
+.about {
+  background-color: #056674;
+  height: 500px;
+}
+
+.about h3 {
+  font-family: "Arsenal", sans-serif;
+  font-size: 35px;
+}
+
+.about p {
+  font-family: "Arsenal", sans-serif;
+  font-size: 20px;
+  line-height: 2;
+  color: #03434d;
+}
+
+/* profile image and its animation */
+.profile img {
+  z-index: 1;
+  position: absolute;
+  width: 15%;
+  transform: rotate(10deg);
+  border: 1px solid #ff4b5c;
+  border-radius: 5px;
+  box-shadow: 2px 2px 8px #000;
+  transition: box-shadow 0.5s;
+  animation: anim-profile 1.5s infinite;
+}
+/*     ↓  ↓  ↓  ↓  ↓       */
+
+@keyframes anim-profile {
+  0% {
+    border-radius: 5px 5px 0px 80px;
+  }
+  50% {
+    border-radius: 5px 5px 80px 0px;
+  }
+  100% {
+    border-radius: 5px 5px 0px 80px;
+  }
+}
+
+.profile img:hover {
+  box-shadow: -8px 10px 20px #1d2c3a;
+  transition: box-shadow 0.5s;
+}
+
+.box {
+  position: relative;
+  background-color: #ffffff70;
+  padding: 20px 100px 20px 220px;
+  margin-right: 40px;
+  border-radius: 32px 0 0 32px;
+  transform: translateX(100px);
+  box-shadow: 10px 5px 20px #000;
+  transition: 0.5s;
+}
+
+.box:hover {
+  background-color: #ffffffa9;
+  box-shadow: 10px 20px 30px #000000be;
+  transition: 0.3s;
+}
+
+/* ---------- EDUCATION ---------- */
+
+.edu-n-achieve {
+  position: relative;
+  z-index: 0;
+  height: 500px;
+  background-color: #bbbbbb;
+  text-align: center;
+  transition: 1s;
+  box-shadow: 0 -5px 30px #000;
+}
+
+/* when the aducation, achievement, and skills background got hover, its color changes */
+.edu-n-achieve:hover,
+.skill:hover {
+  background-color: #e0ece4;
+  transition: 0.5s;
+}
+
+/* h1 for Education, Skills, and Contact Me title */
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  color: #056674;
+  border-bottom: 5px dotted #b9aca6;
+  width: 190px;
+  margin: auto auto 10px;
+  padding-bottom: 20px;
+}
+
+/* styling for the Educational Institutions name */
+h3 {
+  font-family: "Arsenal", sans-serif;
+}
+
+/* the dotted border between two Educational Institutions; and also between two achievement in 'Achievement' section */
+hr {
+  border-style: none;
+  border-bottom: 5px dotted #b9aca6;
+  width: 5%;
+  margin: 10px auto;
+}
+
+/* the red dotted polygon image behind */
+.edu-n-achieve img {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  left: 22%;
+  top: 0px;
+  opacity: 0.5;
+}
+
+/* the white fade background */
+.fade-box-white {
+  position: relative;
+  vertical-align: text-bottom;
+  margin: 0 180px;
+  padding: 50px 20px 20px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ffffff00 0%, #ffffff 100%);
+}
+
+.edu-1,
+.edu-2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  transition: 1s;
+}
+
+.edu-1:hover,
+.edu-2:hover {
+  border-radius: 50px;
+  background-color: #ffffffb4;
+  box-shadow: 0 16px 20px #00000080;
+  transition: 0.5s;
+}
+
+/* the detail about the education I take in University */
+.fade-box-white h4 {
+  font-family: "arsenal", serif;
+}
+
+/* the graduation years for highschool and "currently studying" for university */
+.fade-box-white p {
+  font-family: "Tangerine", cursive;
+  font-size: 25px;
+  display: inline;
+}
+
+/* ---------- SKILLS ---------- */
+
+.skill {
+  position: relative;
+  height: 500px;
+  background-color: #bbbbbb;
+  text-align: center;
+  transition: 1s;
+  box-shadow: 0 -10px 30px #fff;
+}
+
+/* name of the skill */
+.skill-list {
+  font-family: "Arsenal", sans-serif;
+  color: #056674;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* the white dotted polygon image behind */
+.skill img {
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  left: 22%;
+  top: 0px;
+  /* opacity: 0.5; */
+}
+
+/* the red fade background */
+.fade-box-red {
+  position: relative;
+  vertical-align: text-bottom;
+  margin: 0 180px;
+  padding: 20px;
+  height: 100%;
+  /* border-radius: 50px 50px 0 0; */
+  background: linear-gradient(to bottom, #ffffff00 0%, #ff4b5c 100%);
+}
+
+/* the left and right column on the skills */
+.column {
+  z-index: 1;
+  position: relative;
+  float: left;
+  width: 40%;
+  margin: 0 20px;
+  text-align: left;
+}
+
+.skill-div {
+  transition: 0.5s;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.skill-div:hover {
+  border-radius: 10px;
+  background-color: #e0ece480;
+  box-shadow: 0 16px 20px #00000080;
+  transition: 0.5s;
+}
+
+/* the progress bar */
+.td-progress-bar {
+  width: 100%;
+}
+
+/* the progress bar border */
+.progress-border {
+  border: 1px solid #858585;
+  border-radius: 10px;
+}
+
+/* the progress bar color;
+   I use inline css for the percentage width */
+.progress-bar {
+  background-color: #fff;
+  height: 10px;
+  border-radius: 10px;
+}
+
+/* the percentage number */
+.progress-percent {
+  display: inline;
+  font-family: "Arsenal", sans-serif;
+  font-size: 13px;
+  color: #534747;
+}
+
+/* ---------- ACHIEVEMENT ---------- */
+
+/* until now, some of the Achievements and Educations CSS are the same
+   that is why I only specify box-shadow in class 'achievement', which is the only
+   different style between Achievements and Educations CSS */
+.achievement {
+  box-shadow: 0 -10px 30px #ff4b5c;
+}
+
+/* ---------- CONTACT ME ---------- */
+
+.contact {
+  position: relative;
+  height: 500px;
+  background-color: #030303;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 -10px 30px #0565747c;
+}
+
+/* my name: Alvin Sengkey */
+.contact h5 {
+  font-family: "Tangerine", cursive;
+  font-size: 35px;
+  margin: 0 0 20px;
+}
+
+/* the address and the phone number */
+.contact p {
+  font-family: "Tangerine", cursive;
+  font-size: 23px;
+  /* margin: 0 0 20px; */
+}
+
+/* the Contact Me title */
+#contact-text {
+  width: auto;
+  padding: 0px 0 40px;
+  margin-top: -30px;
+  margin-bottom: 50px;
+}
+
+/* for the address and whatsapp icon */
+.icon {
+  font-size: 2rem;
+  color: #66bfbf;
+  transition: color 3s;
+}
+/*66bfbf*/
+.icon:hover {
+  color: #056674;
+  transition: color 0.3s;
+}
+
+/* for the social media in the bottom row */
+.socmed {
+  padding: 20px;
+}
+
+/* for the social media icon */
+.socmed a {
+  text-decoration: none;
+  margin: 20px;
+  font-size: 2rem;
+  color: #056674;
+  transition: color 3s;
+}
+
+.socmed a:hover {
+  color: #66bfbf;
+  transition: color 0.3s;
+}
+
+#email-icon {
+  text-decoration: none;
+  font-size: 2rem;
+  color: #056674;
+  transition: color 3s, background-color 5s;
+  position: absolute;
+  background-color: #030303;
+  padding: 5px 0 35px;
+  width: 100%;
+  right: 0;
+  text-align: center;
+  transform: translateY(-85px);
+}
+
+#email-icon:hover {
+  color: #66bfbf;
+  background-color: transparent;
+  transition: color 0.5s, background-color 0.5s;
+}
+
+#email {
+  padding-top: 30px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+/* for the e-mail animation */
+.email {
+  animation: anim-email 0.8s infinite;
+}
+
+@keyframes anim-email {
+  0% {
+    font-size: 2rem;
+    margin-bottom: 0px;
+  }
+  50% {
+    font-size: 35px;
+    margin-bottom: -3px;
+  }
+  0% {
+    font-size: 2rem;
+    margin-bottom: 0px;
+  }
+}
+
+/* for the whatsapp animation */
+.wa {
+  animation: anim-wa 0.8s infinite;
+}
+
+@keyframes anim-wa {
+  0% {
+    font-size: 2rem;
+    margin-bottom: 0px;
+  }
+  50% {
+    font-size: 35px;
+    margin-bottom: -3px;
+  }
+  0% {
+    font-size: 2rem;
+    margin-bottom: 0px;
+  }
+}
+
+/* I made the grow and shrink animation on the WhatsApp and E-Mail icons
+   to show that you can contact me through it by clicking those icons    */
+
+/* ---------- FOOTER ---------- */
+
+.footer {
+  position: relative;
+  background-color: #030303;
+  /* text-align: center; */
+  padding: 50px;
+}
+
+.footer a {
+  font-size: 10px;
+  text-decoration: none;
+  color: #818181;
+}
+
+.icon-footer {
+  /* float: right; */
+  margin-left: 10px;
+}
+
+.footer p {
+  display: inline;
+  float: right;
+  font-size: 10px;
+  color: #818181;
+}
